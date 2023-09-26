@@ -1,0 +1,410 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* navbar styling  */
+  
+  .navItems li {
+    list-style: none;
+    letter-spacing: 2px;
+    font-size: large;
+    font-family: "Times New Roman";
+  }
+  
+  .navItems li a {
+      text-decoration: none;
+    }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+  }
+  
+  .navLinks a {
+    color: #252525;
+  }
+  
+  ul {
+    margin-left: 12rem;
+  }
+  
+  .navItems {
+    display: flex;
+    gap: 4em;
+    font-size: 15px;
+  }
+  
+  .navItems li:hover {
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .navItems li {
+    padding: 5px 14px;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+  }
+  
+  .navLogo {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  .navLogo a {
+    color: #252525;
+    padding-right: 1rem;
+  }
+  
+  .navLogo a:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  
+  .circle {
+    border: 1px solid #252525;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  
+  @media (max-width: 1200px) {
+    .navItems {
+      gap: 2em;
+    }
+  
+    ul {
+      margin-left: 9rem;
+    }
+    .pageGap{
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1033px) {
+    .navItems {
+      gap: 1em;
+    }
+  
+    ul {
+      margin-left: 2rem;
+    }
+  }
+  
+  @media (max-width: 871px) {
+    .navItems {
+      display: none;
+      z-index: 1;
+      right: 0;
+      left: 0;
+      text-align: center;
+      height: 100vh;
+      position: absolute;
+      background-color: white;
+    }
+  
+    .navItems li {
+      margin: 2rem;
+      letter-spacing: 2px;
+      font-size: large;
+      font-weight: bold;
+    }
+  
+    .navItems li a:hover {
+      display: inline-block;
+      transition: 0.3s ease;
+      padding: 10px 15px;
+      border-radius: 25px;
+      background-color: #bdc4c4;
+    }
+  
+    .navItems li{
+      margin-top: 12px;
+    }
+  
+    input[type="checkbox"]:checked ~ .navItems {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+  /* gap between pages  */
+  
+  .pageGap{
+      background-image:  linear-gradient(to right, #ff66db, #fdec51);
+      height: 10vh;
+      padding: 10px;
+      margin: 0;
+  }
+  
+  /* Hero section contain img */
+  
+  section {
+    background-image:  linear-gradient(to right, #ff66db, #fdec51);
+    height: 90vh;
+    margin-top: 5rem;
+    width: 100%;
+  }
+  
+  .heroBg {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+  }
+  
+  .heroBg img {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: center/cover;
+  }
+  
+  .heroText {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: rgba(241, 110, 132, 0.7);
+    color: #fff;
+    overflow: hidden;
+    width: 40%;
+    padding: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .heroText h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 4px;
+  }
+  
+  .heroBg p {
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 100;
+  }
+  
+  /* Responsive designing of hero section  */
+  
+  @media (max-width: 1200px){
+  .heroText{
+    width: 45%;
+  }
+  }
+  
+  @media (max-width: 976px) {
+    .container-text h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .pageGap{
+      display: none;
+    }
+  
+    .heroText{ 
+      width: 50%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 827px) {
+    section {
+        height: auto;
+        width: 100%;
+    }
+  
+    .heroText {
+      padding: 2rem;
+      width: 55%;
+    }
+  
+    .heroText h1 {
+        letter-spacing: 1px;
+        font-size: 2rem;
+    }
+  
+    .heroBg p {
+        padding: 0;
+        font-size: smaller;
+      letter-spacing: normal;
+    }
+  }
+  
+  @media (max-width: 650px){
+  
+    .heroText {
+      padding: 2rem;
+      width: 60%;
+    }
+  }
+  
+  
+  @media (max-width: 552px) {
+    .heroText {
+      top: 15%;
+        width: 55%;
+        height: auto;
+      padding: 1.2rem;
+    }
+  
+    .heroText h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+  
+    .heroBg p {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .heroText {
+      width: 50%;
+      height: auto;
+    }
+  }
+  
+  
+  /* next page for order now */
+  
+  footer {
+    background-image: linear-gradient(to right, #ff66db, #fdec51);
+    height: 110vh;
+    width: 100%;
+  }
+  
+  .menuItems .center {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: larger;
+    font-family: sans-serif;
+    padding-top: 6rem;
+  }
+  
+  /* designing for flooting boxHolder  */
+  
+  .boxHolder {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    object-fit: cover;
+    margin: 4rem auto;
+    font-family: sans-serif;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 1rem 1rem 1rem;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 20%;
+    cursor: pointer;
+  }
+  
+  .box img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-top-right-radius: 25%;
+  }
+  
+  .box .boxName {
+    letter-spacing: 1px;
+    margin: 0.5rem;
+  }
+  
+  .box p {
+    font-size: 14px;
+    font-weight: 100;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  
+/* last button  */
+
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn button {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(244, 194, 192);
+    color: #191919;
+    border-radius: 25px;
+    border: none;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* Responsive designing of footer section  */
+  
+  @media (max-width: 950px) {
+    footer {
+      height: 200vh;
+    }
+  
+    .menuItems .center {
+      padding-top: 3rem;
+    }
+  
+    .boxHolder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 140vh;
+    }
+  
+    .box img {
+      height: 180px;
+      width: 220px;
+    }
+  
+    .box p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menuItems .center {
+      font-size: 10px;
+    }
+  
+    .boxHolder {
+      margin-top: -1rem;
+    }
+  
+    .box img {
+      height: 140px;
+      width: 140px;
+    }
+  
+    .box p {
+      font-size: 10px;
+    }
+  }
+  
